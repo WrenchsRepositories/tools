@@ -27,4 +27,4 @@ suffix=$(get_ordinal_suffix $day)
 
 result="${week}.,${month}.${day}${suffix},${year},${time_hm}"
 
-git commit -m \"$result\"
+git commit -m "${result}"
