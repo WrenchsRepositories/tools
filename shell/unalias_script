@@ -1,0 +1,6 @@
+#!/bin/bash
+
+FUNCTION_NAME=$1
+
+sed -i "/^${FUNCTION_NAME}()/d" ~/.bashrc
+source ~/.bashrc
