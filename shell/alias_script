@@ -1,0 +1,7 @@
+#!/bin/bash
+
+TOOLS_SHELL_PATH=$HOME/tools/shell
+FUNCTION_NAME=$1
+
+echo "${FUNCTION_NAME}() { bash \"$TOOLS_SHELL_PATH/${FUNCTION_NAME}\" \"\$@\"; }">>~/.bashrc
+source ~/.bashrc
