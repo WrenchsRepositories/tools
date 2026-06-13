@@ -2,6 +2,7 @@
 
 TOOLS_SHELL_PATH=$HOME/tools/shell
 FUNCTION_NAME=$1
+SHELLNAME=$2
 
-echo "${FUNCTION_NAME}() { bash \"$TOOLS_SHELL_PATH/${FUNCTION_NAME}\" \"\$@\"; }">>~/.bashrc
-source ~/.bashrc
+echo "${FUNCTION_NAME}() { bash \"$TOOLS_SHELL_PATH/${FUNCTION_NAME}\" \"\$@\"; }">>~/.${SHELLNAME}rc
+source ${HOME}/.${SHELLNAME}rc

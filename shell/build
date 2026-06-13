@@ -1,0 +1,9 @@
+#!/bin/bash:/bin/zsh
+#read -p "shell:" SHELLNAME
+printf "shell:"
+read SHELLNAME
+
+$SHELL alias_script alias_script $SHELLNAME
+$SHELL alias_script unalias_script $SHELLNAME
+
+source ${HOME}/.${SHELLNAME}rc

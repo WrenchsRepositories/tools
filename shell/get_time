@@ -29,4 +29,3 @@ result="${week}.,${month}.${day}${suffix},${year},${time_hm}"
 
 #echo "$result" |tee >(xclip -selection clipboard)
 echo "$result"
-#echo "git commit -m \"$result\"" | xclip -selection clipboard

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 FUNCTION_NAME=$1
+SHELLNAME=$2
 
-sed -i "/^${FUNCTION_NAME}()/d" ~/.bashrc
-source ~/.bashrc
+sed -i "/^${FUNCTION_NAME}()/d" ~/.${SHELLNAME}rc
+source ${HOME}/.${SHELLNAME}rc
