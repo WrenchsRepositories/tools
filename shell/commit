@@ -1,0 +1,10 @@
+#!/bin/bash
+read -p "type:" type
+read -p "scope:" scope
+read -p "description:" description
+
+result="${type}(${scope}):${description}"
+
+#echo $result
+
+git commit -m "${result}"
