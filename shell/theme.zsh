@@ -11,6 +11,7 @@ PROMPT_CHAR=${PROMPT_CHAR:-'$'}
 ROOT_USER_COLOR=${ROOT_USER_COLOR:-red}
 USER_COLOR=${USER_COLOR:-cyan}
 #HOST_COLOR=${HOST_COLOR:-magenta}
+ROOT_HOST_COLOR=${HOST_COLOR:-red}
 HOST_COLOR=${HOST_COLOR:-green}
 PWD_COLOR=${PWD_COLOR:-blue}
 ROOT_PROMPT_SYMBOL_COLOR=${PROMPT_SYMBOL_COLOR:-red}
@@ -22,7 +23,7 @@ ROOT_FIRST_LINE() {
 	printf "%s%s(%s%s%s%s%s%s)-[%s%s%s] %s" \
 		"$TOP_LEFT_CHAR" "$HORIZ" \
 		"%F{$ROOT_USER_COLOR}" "%n" "%f" \
-		"%F{$HOST_COLOR}" "@%m" "%f" \
+		"%F{$ROOT_HOST_COLOR}" "@%m" "%f" \
 		"%F{$PWD_COLOR}" "%~" "%f" "$(GIT_BRANCH)"
 }
 
