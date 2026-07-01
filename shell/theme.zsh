@@ -10,7 +10,8 @@ PROMPT_CHAR=${PROMPT_CHAR:-'$'}
 
 ROOT_USER_COLOR=${ROOT_USER_COLOR:-red}
 USER_COLOR=${USER_COLOR:-cyan}
-HOST_COLOR=${HOST_COLOR:-magenta}
+#HOST_COLOR=${HOST_COLOR:-magenta}
+HOST_COLOR=${HOST_COLOR:-green}
 PWD_COLOR=${PWD_COLOR:-blue}
 ROOT_PROMPT_SYMBOL_COLOR=${PROMPT_SYMBOL_COLOR:-red}
 PROMPT_SYMBOL_COLOR=${PROMPT_SYMBOL_COLOR:-cyan}
@@ -18,7 +19,7 @@ GIT_BRANCH_COLOR=${GIT_BRANCH_COLOR:-yellow}
 
 
 ROOT_FIRST_LINE() {
-	printf "%s%s(%s%s%s%s%s%s)-[%s%s%s] <%s>" \
+	printf "%s%s(%s%s%s%s%s%s)-[%s%s%s] %s" \
 		"$TOP_LEFT_CHAR" "$HORIZ" \
 		"%F{$ROOT_USER_COLOR}" "%n" "%f" \
 		"%F{$HOST_COLOR}" "@%m" "%f" \
@@ -26,7 +27,7 @@ ROOT_FIRST_LINE() {
 }
 
 FIRST_LINE() {
-	printf "%s%s(%s%s%s%s%s%s)-[%s%s%s] <%s>" \
+	printf "%s%s(%s%s%s%s%s%s)-[%s%s%s] %s" \
 		"$TOP_LEFT_CHAR" "$HORIZ" \
 		"%F{$USER_COLOR}" "%n" "%f" \
 		"%F{$HOST_COLOR}" "@%m" "%f" \
@@ -54,7 +55,7 @@ GIT_BRANCH() {
 		if [[ -n $(git status --porcelain 2>/dev/null) ]]; then
 			dirty='*'
 		fi
-		echo -n "%F{$GIT_BRANCH_COLOR}${branch}${dirty}%f"
+		echo -n "<%F{$GIT_BRANCH_COLOR}${branch}${dirty}%f>"
 	fi
 }
 
