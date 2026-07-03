@@ -1,0 +1,52 @@
+"vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-n>": false,
+        "<C-j>": false,
+        "<C-b>": false,
+        "<C-c>": false,
+        "<A-j>": false,
+        "<A-k>": false,
+        "<C-p>": false,
+    },
+    "vim.useSystemClipboard": true,
+    "vim.statusBarColors.visualline": "",
+    "vim.commandLineModeKeyBindingsNonRecursive": [],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<A-k>"
+            ],
+            "commands": [
+                ":m .-2<CR>=="
+            ]
+        },
+        {
+            "before": [
+                "<A-j>"
+            ],
+            "commands": [
+                ":m .+1<CR>=="
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<A-k>"
+            ],
+            "commands": [
+                ":m '<-2<CR>gv=gv"
+            ]
+        },
+        {
+            "before": [
+                "<A-j>"
+            ],
+            "commands": [
+                ":m '>+1<CR>gv=gv"
+            ]
+        }
+    ],
+    "vim.commandLineModeKeyBindings": [],
